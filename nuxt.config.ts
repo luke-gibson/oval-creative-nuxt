@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Montserrat+Alternates': [400, 500, 700, 900], // add the weights you need
+      'Montserrat+Alternates': [400, 500, 700, 900],
     },
     display: 'swap',
   },

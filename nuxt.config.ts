@@ -2,5 +2,20 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/image']
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts'
+  ],
+  tailwindcss: {
+    config: './tailwind.config.js',
+  },
+  googleFonts: {
+    families: {
+      'Montserrat+Alternates': [400, 500, 700, 900], // add the weights you need
+    },
+    display: 'swap',
+  },
 })

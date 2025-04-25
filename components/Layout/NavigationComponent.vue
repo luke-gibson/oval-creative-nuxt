@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-defineProps<{ isOpen?: boolean }>()
+  const route = useRoute()
+  defineProps<{ isOpen?: boolean }>()
 </script>
 
 <template>

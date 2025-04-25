@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { useMobileNav } from '@/composables/useMobileNav'
+  import { useMobileNav } from '@/composables/useMobileNav'
 
-const { isMobileNavOpen, closeNav } = useMobileNav()
-const route = useRoute()
+  const { isMobileNavOpen, closeNav } = useMobileNav()
+  const route = useRoute()
 
-watch(() => route.fullPath, () => {
-  closeNav()
-})
+  watch(() => route.fullPath, () => {
+    closeNav()
+  })
 
-watch(isMobileNavOpen, (val) => {
-  if (val) {
-    document.body.classList.add('is-locked')
-  } else {
-    document.body.classList.remove('is-locked')
-  }
-})
+  watch(isMobileNavOpen, (val) => {
+    if (val) {
+      document.body.classList.add('is-locked')
+    } else {
+      document.body.classList.remove('is-locked')
+    }
+  });
 </script>
 
 <template>
@@ -40,7 +40,3 @@ watch(isMobileNavOpen, (val) => {
     </div>
   </header>
 </template>
-
-<style lang="sass" scoped>
-/* You can add more styles here if needed */
-</style>

@@ -53,7 +53,7 @@ defineProps<{ isOpen?: boolean }>()
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
     z-index: 50;
     margin-top: 50px;
 

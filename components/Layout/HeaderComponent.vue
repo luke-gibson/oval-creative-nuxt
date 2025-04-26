@@ -24,7 +24,7 @@
       <IconsLogo class="w-32 md:w-42"/>
     </NuxtLink>
     <LayoutNavigationComponent class="hidden md:block" />
-    <ButtonsSecondaryButton class="hidden md:block" to="/">
+    <ButtonsSecondaryButton class="hidden md:block" to="/contact">
       get started <IconsSpeech class="w-5 inline ml-2"/>
     </ButtonsSecondaryButton>
     <LayoutHamburgerComponent :isActive="isMobileNavOpen" />

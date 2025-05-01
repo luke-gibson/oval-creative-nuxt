@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Montserrat+Alternates': [400, 500, 700, 900],
+      'Montserrat+Alternates': [400, 500, 700, 800],
     },
     display: 'swap',
   },

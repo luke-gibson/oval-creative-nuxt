@@ -1,4 +1,12 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Oval Creative – Web Design & Development Agency Launching Soon',
+  ogTitle: 'Oval Creative – Web Design & Development Agency Launching Soon',
+  description: 'Oval Creative is a new digital agency crafting bold, beautiful, and high-performance websites. Launching 12th May – just in time for the StrapiConf!',
+  ogDescription: 'Oval Creative is a new digital agency crafting bold, beautiful, and high-performance websites. Launching 12th May – just in time for the StrapiConf!',
+  ogImage: 'https://res.cloudinary.com/dunufhmqx/image/upload/v1746128481/holding_page_popen_graph_aoxegr.jpg',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>

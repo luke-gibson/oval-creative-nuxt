@@ -1,9 +1,9 @@
 <template>
-  <LayoutHeaderComponent/>
-  <main class="bg-primary rounded-b-3xl pb-4 border-b-8 border-secondary pt-28 md:pt-32">
+  <!-- <LayoutHeaderComponent/> -->
+  <main class="bg-primary">
     <slot />
   </main>
-  <LayoutFooterComponent/>
+  <!-- <LayoutFooterComponent/> -->
 </template>
 
 <style lang="scss">

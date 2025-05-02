@@ -18,7 +18,7 @@
 </script>
 
 <template>
-<header class="fixed top-0 left-0 right-0 max-w-[1440px] mx-auto z-50">  
+<header class="fixed top-0 left-0 right-0 max-w-[1470px] mx-auto z-50">  
   <div class="bg-[#3e4555] bg-opacity-60 backdrop-blur-md flex justify-between items-center py-3 px-4 rounded-xl mx-4 mt-5 md:mt-8 relative  z-30">
     <NuxtLink to="/" aria-label="oval creative logo and link to home page">
       <IconsLogo class="w-32 md:w-42 mr-0 md:mr-12"/>

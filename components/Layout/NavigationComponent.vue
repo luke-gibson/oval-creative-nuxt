@@ -55,13 +55,13 @@ defineProps<{ isOpen?: boolean }>()
     width: 100%;
     height: 100svh;
     z-index: 50;
-    margin-top: 50px;
 
     &__list {
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100%;
+      margin-top: 50px;
     }
 
     &__item {

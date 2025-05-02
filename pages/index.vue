@@ -11,6 +11,10 @@
       ctaHasArrow : true,
       ctaLink : "/about",    
       shortWidth : true,
+    },
+    services : {
+      title : "how can we help your business?",
+      hasCta : true,
     }
   }
 </script>
@@ -35,8 +39,11 @@
   </LayoutContainerComponent>
 
   <LayoutContainerComponent>
-    <section class="h-screen w-full">
-      <h2>hmm</h2>
-      </section>  
+    <ServiceCardsComponent 
+      :title="data.services.title"
+      :hasCta="data.services.hasCta"
+      />
   </LayoutContainerComponent>
+
+
 </template>

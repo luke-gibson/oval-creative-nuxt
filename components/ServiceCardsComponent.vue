@@ -9,6 +9,11 @@
     <ButtonsSecondaryButton v-if="hasCta" class="mt-6 flex" to="/services">Our Services<IconsRightIcon class="ml-2 w-5 inline-block"/></ButtonsSecondaryButton>  
   </div>
   <div>
-    <CardComponent/>
+    <CardComponent 
+      v-for="service in services"
+      :link="service.link"
+      :title="service.title"
+      :description="service.description"
+     />
   </div>
 </template>

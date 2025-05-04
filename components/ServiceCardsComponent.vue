@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import type { ServiceCards } from '@/types/serviceCards'
-  defineProps<ServiceCards>()
+  import type { Services } from '@/types/services'
+  defineProps<Services>()
 </script>
 
 <template>
@@ -8,9 +8,9 @@
     <h2 class="text-white text-3xl md:text-6xl font-extrabold max-w-3xl">{{ title }}</h2>
     <ButtonsSecondaryButton v-if="hasCta" class="mt-6 flex" to="/services">Our Services<IconsRightIcon class="ml-2 w-5 inline-block"/></ButtonsSecondaryButton>  
   </div>
-  <div>
+  <div class="flex gap-10 md:gap-16 flex-wrap md:flex-nowrap">
     <CardComponent 
-      v-for="service in services"
+      v-for="service in serviceList"
       :link="service.link"
       :title="service.title"
       :description="service.description"

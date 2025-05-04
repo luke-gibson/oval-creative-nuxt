@@ -11,22 +11,24 @@
       ctaHasArrow : true,
       ctaLink : "/about",    
       shortWidth : true,
-    }
+    },
   }
 
   const services = {
     title: "how can we help your business",
     hasCta: true,
-    serviceOne : {
-      link: "/services",
-      title: "design + branding",
-      description: "We craft bespoke, user-focused designs that reflect your brand, drive engagement, and deliver seamless experiences across all devices.",
-    },
-    serviceTwo : {
-      link: "/services",
-      title: "web development",
-      description: "We build fast, scalable websites using Strapi and Nuxt, ensuring high performance, responsiveness, SEO readiness, and smooth content management.",
-    }
+    serviceList : [
+      {
+        link: "/services",
+        title: "design + branding",
+        description: "We craft bespoke, user-focused designs that reflect your brand, drive engagement, and deliver seamless experiences across all devices.",
+      },
+      {
+        link: "/services",
+        title: "web development",
+        description: "We build fast, scalable websites using Strapi and Nuxt, ensuring high performance, responsiveness, SEO readiness, and smooth content management.",
+      }
+    ]
   }
 </script>
 
@@ -53,9 +55,11 @@
     <ServiceCardsComponent 
       :title="services.title"
       :hasCta="services.hasCta"
-      :services="services"
+      :serviceList="services.serviceList"
       />
   </LayoutContainerComponent>
 
-
+  <LayoutContainerComponent>
+    <CaseStudyComponent/>
+  </LayoutContainerComponent>
 </template>

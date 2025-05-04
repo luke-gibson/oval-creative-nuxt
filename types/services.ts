@@ -1,8 +1,8 @@
 import type { Card } from '@/types/card'
 
-export interface ServiceCards {
+export interface Services {
     id?: number;
     title: string;
     hasCta: boolean;
-    services: Card[];
+    serviceList: Card[];
 }

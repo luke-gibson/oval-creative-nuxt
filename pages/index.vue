@@ -27,6 +27,16 @@
         link: "/services",
         title: "web development",
         description: "We build fast, scalable websites using Strapi and Nuxt, ensuring high performance, responsiveness, SEO readiness, and smooth content management.",
+      },
+      {
+        link: "/services",
+        title: "design + branding",
+        description: "We craft bespoke, user-focused designs that reflect your brand, drive engagement, and deliver seamless experiences across all devices.",
+      },
+      {
+        link: "/services",
+        title: "web development",
+        description: "We build fast, scalable websites using Strapi and Nuxt, ensuring high performance, responsiveness, SEO readiness, and smooth content management.",
       }
     ]
   }

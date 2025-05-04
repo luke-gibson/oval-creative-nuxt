@@ -12,6 +12,17 @@
       ctaLink : "/about",    
       shortWidth : true,
     },
+    caseStudyCard : {
+      image : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746391003/isle-contracts-case-study_exgk7l.jpg",
+      alt : "Photograph of the spinakker tower through Portmsouth",
+      brandLogoUrl : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746389266/isleContractsLogo_noqavz.svg",
+      brandLogoAlt : "Isle Contracts Logo",
+      copy : "Where design meets strategy. We're a full service agency specialising in web design and development. We blend creativity with technical expertise to help your business stand out and succeed.",
+      link : "/projects",
+      hasCta: true,
+      hasCtaIcon: true,
+      ctaText: "View Isle Contracts",
+    }
   }
 
   const services = {
@@ -70,6 +81,15 @@
   </LayoutContainerComponent>
 
   <LayoutContainerComponent>
-    <CaseStudyComponent/>
+    <CaseStudyComponent
+      :link="data.caseStudyCard.link"
+      :image="data.caseStudyCard.image"
+      :alt="data.caseStudyCard.alt"
+      :hasCta="data.caseStudyCard.hasCta"
+      :hasCtaIcon="data.caseStudyCard.hasCtaIcon"
+      :ctaText="data.caseStudyCard.ctaText"
+      :copy="data.caseStudyCard.copy"
+      :brandLogoAlt="data.caseStudyCard.brandLogoAlt"
+      :brandLogoUrl="data.caseStudyCard.brandLogoUrl"/>
   </LayoutContainerComponent>
 </template>

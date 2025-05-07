@@ -5,17 +5,18 @@
 
 <template>
   <div class="c-split flex flex-wrap items-center pb-14 md:pb-20">
+    <NuxtPicture
+      class="w-full md:w-1/2 rounded-2xl overflow-hidden"
+      :class="invert ? 'md:order-2' : ''"      
+      :src="image.url"
+      :alt="image.alt"/>
     <div 
-      class="w-full md:w-1/2 text-xl md:text-2xl text-white leading-8"
-      :class="invert ? 'order-2 md:pl-28' : 'md:pr-28'"
+      class="w-full md:w-1/2 text-xl md:text-2xl text-white leading-8 mt-12 md:mt-0 "
+      :class="invert ? 'md:order-1 md:pr-28' : 'md:pl-28'"
       >
       <p>{{ copy }}</p>
     </div>
-    <NuxtPicture
-      class="w-full md:w-1/2 rounded-2xl overflow-hidden mb-12 md:mb-0"
-      :class="invert ? 'order-1' : ''"      
-      :src="image.url"
-      :alt="image.alt"/>
+    
   </div>
 </template>
 

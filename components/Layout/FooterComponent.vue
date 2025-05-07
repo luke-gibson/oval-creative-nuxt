@@ -10,7 +10,7 @@
           We'd love to hear about it. Whether you're starting fresh or need help levelling up, get in touch and let's make something great together.
         </p>
       </div>
-      <div class="mt-6 md:mt-0 text-right">
+      <div class="mt-6 md:mt-0 md:text-right">
         <h3 class="font-bold text-xl md:text-3xl mb-4">
           How to reach us          
         </h3>        

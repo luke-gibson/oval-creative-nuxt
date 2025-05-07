@@ -8,8 +8,8 @@ defineProps<CaseStudyCard>()
     <NuxtPicture class="w-full h-[550px] overflow-hidden block rounded-2xl" :src="image" :alt="alt"
       format="avif,webp, jpg" />
     <figcaption class="absolute bottom-6 left-5 right-5 md:bottom-10 md:left-12 md:right-12 max-w-lg md:max-w-4xl z-10">
-      <NuxtImg class="max-w-[250px]" :src="brandLogoUrl" :alt="brandLogoAlt" />
-      <p class="text-white text-xl md:text-2xl text-white leading-8">{{ copy }}</p>
+      <NuxtImg class="max-w-[175px] md:max-w-[250px] mb-3" :src="brandLogoUrl" :alt="brandLogoAlt" />
+      <p class="text-white text-xl md:text-2xl text-white leading-7 md:leading-8">{{ copy }}</p>
       <ButtonsSecondaryButton v-if="hasCta" :to="link" class="mt-6 inline-flex">
         {{ ctaText }}<IconsRightIcon v-if="hasCtaIcon" class="ml-2 w-5 inline-block"/>
       </ButtonsSecondaryButton>  

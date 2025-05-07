@@ -22,6 +22,23 @@
       hasCta: true,
       hasCtaIcon: true,
       ctaText: "View Isle Contracts",
+    },
+    accreditations : {
+      copy : "Our modern tech stack powers fast, scalable websites that look great and perform even better.",
+      images : [
+        {
+          url: "https://res.cloudinary.com/dunufhmqx/image/upload/v1746617163/logo-green-white_kekjss.svg",
+          alt: "nuxt logo"
+        },
+        {
+          url: "https://res.cloudinary.com/dunufhmqx/image/upload/v1746617021/Strapi.full.logo.light_lndlzo.svg",
+          alt: "strapi logo"
+        },
+        {
+          url: "https://res.cloudinary.com/dunufhmqx/image/upload/v1746617201/render-logo_wvkptv.svg",
+          alt: "render logo"
+        }
+      ]  
     }
   }
 
@@ -91,5 +108,11 @@
       :copy="data.caseStudyCard.copy"
       :brandLogoAlt="data.caseStudyCard.brandLogoAlt"
       :brandLogoUrl="data.caseStudyCard.brandLogoUrl"/>
+  </LayoutContainerComponent>
+
+  <LayoutContainerComponent>
+    <AccreditationsComponent 
+      :copy="data.accreditations.copy"
+      :images="data.accreditations.images"/>
   </LayoutContainerComponent>
 </template>

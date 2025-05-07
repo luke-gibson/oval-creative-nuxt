@@ -6,15 +6,15 @@
         <h3 class="font-bold text-xl md:text-3xl mb-4">
           Have a project in mind?
         </h3>
-        <p class="max-w-md">
+        <p class="max-w-lg">
           We'd love to hear about it. Whether you're starting fresh or need help levelling up, get in touch and let's make something great together.
         </p>
       </div>
-      <div class="w-full md:w-1/3 mt-6 md:mt-0">
+      <div class="mt-6 md:mt-0 text-right">
         <h3 class="font-bold text-xl md:text-3xl mb-4">
           How to reach us          
         </h3>        
-        <NuxtLink class="inline-block hover:text-secondary transition-all" to="tel07513822562">+44 7513 822 562</NuxtLink>
+        <NuxtLink class="inline-block hover:text-secondary transition-all" to="tel=07513822562">+44 7513 822 562</NuxtLink>
         <NuxtLink class="block hover:text-secondary transition-all" to="mailto:letschat@ovalcreative.co.uk">letschat@ovalcreative.co.uk</NuxtLink>
         <p>Send a <NuxtLink class="font-bold text-secondary hover:text-primary transition-all" to="https://wa.me/+447513822562">WhatsApp</NuxtLink></p>
       </div>     

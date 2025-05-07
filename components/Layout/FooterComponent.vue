@@ -14,7 +14,7 @@
         <h3 class="font-bold text-xl md:text-3xl mb-4">
           How to reach us          
         </h3>        
-        <NuxtLink class="inline-block hover:text-secondary transition-all" to="tel=07513822562">+44 7513 822 562</NuxtLink>
+        <NuxtLink class="inline-block hover:text-secondary transition-all" to="tel:07513822562">+44 7513 822 562</NuxtLink>
         <NuxtLink class="block hover:text-secondary transition-all" to="mailto:letschat@ovalcreative.co.uk">letschat@ovalcreative.co.uk</NuxtLink>
         <p>Send a <NuxtLink class="font-bold text-secondary hover:text-primary transition-all" to="https://wa.me/+447513822562">WhatsApp</NuxtLink></p>
       </div>     

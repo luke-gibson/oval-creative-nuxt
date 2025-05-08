@@ -4,7 +4,10 @@ defineProps<CaseStudyCard>()
 </script>
 
 <template>
-  <figure class="c-casestudy relative my-14 md:my-20 ">
+  <figure 
+    class="c-casestudy relative"
+    :class="[hasSpaceBottom ? 'mb-14 md:mb-20' : '', hasSpaceTop ? 'mt-14 md:mt-20' : '']"
+    >
     <NuxtPicture class="w-full h-[550px] overflow-hidden block rounded-2xl" :src="image" :alt="alt"
       format="avif,webp, jpg" />
     <figcaption class="absolute bottom-6 left-5 right-5 md:bottom-10 md:left-12 md:right-12 max-w-lg md:max-w-4xl z-10">

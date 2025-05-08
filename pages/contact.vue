@@ -1,13 +1,40 @@
-<template>
-  <div>
-    
-  </div>
-</template>
-
 <script lang="ts" setup>
-
+  const data = {
+    hero : {
+      image : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746733695/southsea_seafront_sunrise_ceozio.jpg",
+      alt : "Photograph of Southsea Seafront Sun Rise",
+      title : "lets chat..."
+    },  
+    text : {
+      copy : "Where design meets strategy. We're a full service agency specialising in web design and development. Whether you're launching a new brand or streamlining operationgs, we blend creativity with technical expertise to help your business stand out and succeed.",
+      hasCta : false,
+      ctaHasArrow : true,
+      ctaLink : "/about",    
+      shortWidth : true,
+      hasSpaceBottom: true,
+      hasSpaceTop: true,
+    },
+  }
 </script>
 
-<style>
+<template>
+  <LayoutContainerComponent>
+    <HeroComponent
+      :image="data.hero.image"
+      :alt="data.hero.alt"
+      :title="data.hero.title"
+    />
+  </LayoutContainerComponent>
 
-</style>
+  <LayoutContainerComponent>
+    <TextComponent 
+      :copy="data.text.copy"
+      :hasCta="data.text.hasCta"
+      :ctaHasArrow="data.text.ctaHasArrow"
+      :ctaLink="data.text.ctaLink"
+      :shortWidth="data.text.shortWidth"
+      :hasSpaceBottom="data.text.hasSpaceBottom"
+      :hasSpaceTop="data.text.hasSpaceTop"
+    />
+  </LayoutContainerComponent>
+</template>

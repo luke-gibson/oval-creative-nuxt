@@ -11,10 +11,14 @@
       ctaHasArrow : true,
       ctaLink : "/about",    
       shortWidth : true,
+      hasSpaceBottom: true,
+      hasSpaceTop: true,
     },
     split : {
       copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia turpis erat, eget aliquam dui porttitor at. Sed nisl mi, fringilla sit amet odio eu, blandit tempor nibh. Vestibulum arcu massa, aliquet vitae bibendum rutrum, viverra non metus. ",
       invert: false,
+      hasSpaceBottom: true,
+      hasSpacetop: false,
       image : {
         url : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746646978/southsea_beach_cafe_f64ozr.jpg",
         alt : "Photograph of the southsea beach cafe in the sunrise golden hour.",
@@ -22,6 +26,8 @@
     },
     accreditations : {
       copy : "Our modern tech stack powers fast, scalable websites that look great and perform even better.",
+      hasSpaceBottom: true,
+      hasSpaceTop: false,
       images : [
         {
           url: "https://res.cloudinary.com/dunufhmqx/image/upload/v1746617163/logo-green-white_kekjss.svg",
@@ -56,6 +62,8 @@
       :ctaHasArrow="data.text.ctaHasArrow"
       :ctaLink="data.text.ctaLink"
       :shortWidth="data.text.shortWidth"
+      :hasSpaceBottom="data.text.hasSpaceBottom"
+      :hasSpaceTop="data.text.hasSpaceTop"
     />
   </LayoutContainerComponent>
 
@@ -64,12 +72,16 @@
       :copy="data.split.copy"
       :invert="data.split.invert"
       :image="data.split.image"
+      :hasSpaceBottom="data.split.hasSpaceBottom"
+      :hasSpaceTop="data.split.hasSpacetop"
       />
   </LayoutContainerComponent>
 
   <LayoutContainerComponent>
     <AccreditationsComponent 
       :copy="data.accreditations.copy"
-      :images="data.accreditations.images"/>
+      :images="data.accreditations.images"
+      :hasSpaceBottom="data.accreditations.hasSpaceBottom"
+      :hasSpaceTop="data.accreditations.hasSpaceTop"/>
   </LayoutContainerComponent>
 </template>

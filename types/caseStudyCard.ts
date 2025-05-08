@@ -11,4 +11,7 @@ export interface CaseStudyCard {
     hasCtaIcon: boolean;
     ctaText: string;
     link: string;
+
+    hasSpaceBottom: boolean;
+    hasSpaceTop: boolean;
 }

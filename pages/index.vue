@@ -11,6 +11,8 @@
       ctaHasArrow : true,
       ctaLink : "/about",    
       shortWidth : true,
+      hasSpaceBottom: true,
+      hasSpaceTop: true,
     },
     caseStudyCard : {
       image : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746391003/isle-contracts-case-study_exgk7l.jpg",
@@ -22,9 +24,13 @@
       hasCta: true,
       hasCtaIcon: true,
       ctaText: "View Isle Contracts",
+      hasSpaceBottom: true,
+      hasSpaceTop: true,
     },
     accreditations : {
       copy : "Our modern tech stack powers fast, scalable websites that look great and perform even better.",
+      hasSpaceBottom: true,
+      hasSpaceTop: false,
       images : [
         {
           url: "https://res.cloudinary.com/dunufhmqx/image/upload/v1746617163/logo-green-white_kekjss.svg",
@@ -45,6 +51,8 @@
   const services = {
     title: "how can we help your business",
     hasCta: true,
+    hasSpaceBottom: false,
+    hasSpaceTop: false,
     serviceList : [
       {
         link: "/services",
@@ -86,6 +94,8 @@
       :ctaHasArrow="data.text.ctaHasArrow"
       :ctaLink="data.text.ctaLink"
       :shortWidth="data.text.shortWidth"
+      :hasSpaceBottom="data.text.hasSpaceBottom"
+      :hasSpaceTop="data.text.hasSpaceTop"
     />
   </LayoutContainerComponent>
 
@@ -93,6 +103,8 @@
     <ServiceCardsComponent 
       :title="services.title"
       :hasCta="services.hasCta"
+      :hasSpaceBottom="services.hasSpaceBottom"
+      :hasSpaceTop="services.hasSpaceTop"
       :serviceList="services.serviceList"
       />
   </LayoutContainerComponent>
@@ -107,12 +119,17 @@
       :ctaText="data.caseStudyCard.ctaText"
       :copy="data.caseStudyCard.copy"
       :brandLogoAlt="data.caseStudyCard.brandLogoAlt"
-      :brandLogoUrl="data.caseStudyCard.brandLogoUrl"/>
+      :brandLogoUrl="data.caseStudyCard.brandLogoUrl"
+      :hasSpaceBottom="data.caseStudyCard.hasSpaceBottom"
+      :hasSpaceTop="data.caseStudyCard.hasSpaceTop"
+      />
   </LayoutContainerComponent>
 
   <LayoutContainerComponent>
     <AccreditationsComponent 
       :copy="data.accreditations.copy"
-      :images="data.accreditations.images"/>
+      :images="data.accreditations.images"
+      :hasSpaceBottom="data.accreditations.hasSpaceBottom"
+      :hasSpaceTop="data.accreditations.hasSpaceTop"/>
   </LayoutContainerComponent>
 </template>

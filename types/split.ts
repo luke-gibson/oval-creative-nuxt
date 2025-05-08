@@ -5,4 +5,6 @@ export interface Split {
     copy: string;
     image: Image;
     invert: boolean;
+    hasSpaceBottom: boolean;
+    hasSpaceTop: boolean;
 }

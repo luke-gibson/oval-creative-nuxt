@@ -5,4 +5,6 @@ export interface Text {
     ctaHasArrow: boolean;
     ctaLink: string;
     shortWidth: boolean;
+    hasSpaceBottom: boolean;
+    hasSpaceTop: boolean;
 }

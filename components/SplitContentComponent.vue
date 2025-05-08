@@ -4,7 +4,10 @@
 </script>
 
 <template>
-  <div class="c-split flex flex-wrap items-center pb-14 md:pb-20">
+  <div 
+    class="c-split flex flex-wrap items-center"
+    :class="[hasSpaceBottom ? 'pb-14 md:pb-20' : '', hasSpaceTop ? 'pt-14 md:pt-20' : '']"
+  >
     <NuxtPicture
       class="w-full md:w-1/2 rounded-2xl overflow-hidden"
       :class="invert ? 'md:order-2' : ''"      

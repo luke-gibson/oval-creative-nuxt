@@ -4,7 +4,10 @@
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-between pb-14 md:pb-20">
+  <div 
+    class="flex flex-wrap justify-between"
+    :class="[hasSpaceTop ? 'pt-14 md:pt-20' : '', hasSpaceBottom ? 'pb-14 md:pb-20' : '']"
+    >
     <div class="md:w-1/3 md:pr-20">
       <p class="text-xl md:text-2xl text-white">{{ copy }}</p>
     </div>

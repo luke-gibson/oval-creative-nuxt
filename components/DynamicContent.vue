@@ -5,6 +5,7 @@ import SplitContentComponent from '~/components/SplitContentComponent.vue';
 import AccreditationsComponent from '~/components/AccreditationsComponent.vue';
 import ServiceCardsComponent from '~/components/ServiceCardsComponent.vue'
 import CaseStudyComponent from '~/components/CaseStudyComponent.vue';
+import ProjectListComponent from '~/components/ProjectListComponent.vue';
 
 import type { ContentBlock } from '~/types/contentBlock';
 
@@ -24,6 +25,8 @@ const getComponent = (item: ContentBlock) => {
       return ServiceCardsComponent;
     case 'components.case-study':
       return CaseStudyComponent;
+    case 'components.project-list':
+      return ProjectListComponent;
     default:
       return null;
   }

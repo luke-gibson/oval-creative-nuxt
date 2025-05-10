@@ -1,9 +1,9 @@
-<script setup lang="ts">
-  import type { ProjectData } from '~/types/project';
+<script lang="ts" setup>
+ import type { ProjectData } from '~/types/project';
   const config = useRuntimeConfig();
   const route = useRoute()
 
-  const { data } = await useAsyncData<ProjectData>('home', () => 
+  const { data } = await useAsyncData<ProjectData>('project', () => 
     $fetch(`${config.public.strapiUrl}/api/project?pLevel`)
   );
 
@@ -24,8 +24,9 @@
     ogImage: data.value?.data.image?.formats?.large?.url || data.value?.data.image?.url || 'https://example.com/default-image.png',
     twitterCard: 'summary_large_image',
   });
+
 </script>
 
 <template>
-  <DynamicContent v-if="data" :content="data.data.content" />
+    <DynamicContent v-if="data" :content="data.data.content" />
 </template>

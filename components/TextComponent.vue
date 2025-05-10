@@ -5,7 +5,7 @@
 
 <template>  
   <LayoutContainerComponent
-    class="text-xl md:text-2xl text-white leading-8" 
+    class="text-white leading-8" 
     :class="[shortWidth ? 'md:pr-[20%]' : '', hasSpaceBottom ? 'pb-14 md:pb-20' : '', hasSpaceTop ? 'pt-14 md:pt-20' : '']"    
     >
     <RichTextBlocks v-if="Array.isArray(copy)" :data="copy"/>

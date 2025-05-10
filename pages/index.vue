@@ -109,17 +109,6 @@
 <template>
  
   <DynamicContent v-if="data" :content="data.data.content" />
- 
-
-  <!-- <LayoutContainerComponent>
-    <ServiceCardsComponent 
-      :title="services.title"
-      :hasCta="services.hasCta"
-      :hasSpaceBottom="services.hasSpaceBottom"
-      :hasSpaceTop="services.hasSpaceTop"
-      :serviceList="services.serviceList"
-      />
-  </LayoutContainerComponent> -->
 
   <LayoutContainerComponent>
     <CaseStudyComponent

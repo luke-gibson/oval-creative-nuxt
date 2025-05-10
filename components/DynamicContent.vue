@@ -2,7 +2,8 @@
 import HeroComponent from '~/components/HeroComponent.vue';
 import TextComponent from '~/components/TextComponent.vue';
 import SplitContentComponent from '~/components/SplitContentComponent.vue';
-import AccreditationsComponent from '~/components/AccreditationsComponent.vue'
+import AccreditationsComponent from '~/components/AccreditationsComponent.vue';
+import ServiceCardsComponent from '~/components/ServiceCardsComponent.vue'
 
 import type { ContentBlock } from '~/types/contentBlock';
 
@@ -18,6 +19,8 @@ const getComponent = (item: ContentBlock) => {
       return SplitContentComponent;
     case 'components.accreditations':
       return AccreditationsComponent;
+    case 'components.services-list':
+      return ServiceCardsComponent;
     default:
       return null;
   }

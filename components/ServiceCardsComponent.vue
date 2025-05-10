@@ -4,21 +4,18 @@
 </script>
 
 <template>
-  <div :class="[hasSpaceBottom ? 'pb-14 md:pb-20' : '', hasSpaceTop ? 'pt-14 md:pt-20' : '']">
-    <div 
-      v-if="title?.trim() && hasCta" 
-      class="flex justify-between flex-wrap items-start mb-12"    
-      >
-      <h2 class="text-white text-3xl md:text-6xl font-extrabold max-w-3xl">{{ title }}</h2>
-      <ButtonsSecondaryButton v-if="hasCta" class="mt-6 flex" to="/services">Our Services<IconsRightIcon class="ml-2 w-5 inline-block"/></ButtonsSecondaryButton>  
+  <LayoutContainerComponent :class="[hasSpaceBottom ? 'pb-14 md:pb-20' : '', hasSpaceTop ? 'pt-14 md:pt-20' : '']">
+    <div class="flex justify-between flex-wrap items-start mb-12">
+      <RichTextBlocks class="max-w-3xl" :data="content"/>
+      <ButtonsSecondaryButton v-if="hasCta" class="mt-6 flex" :to="ctaLink">{{ ctaText }}<IconsRightIcon class="ml-2 w-5 inline-block"/></ButtonsSecondaryButton>  
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
       <CardComponent 
-        v-for="service in serviceList"
-        :link="service.link"
+        v-for="service in service_lists"
+        :link="service.slug"
         :title="service.title"
         :description="service.description"
       />
     </div>
-  </div>
+  </LayoutContainerComponent>
 </template>

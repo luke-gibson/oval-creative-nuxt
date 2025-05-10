@@ -5,7 +5,7 @@
 
 <template>
   <NuxtLink 
-    :to="link"
+    :to="`services/${link}`"
     :title="title"
     :description="description"
     class="group bg-[#3e4555] bg-opacity-60 rounded-2xl pt-8 pr-16 md:pr-24 pb-8 pl-8 text-white border-t-8 border-secondary relative"

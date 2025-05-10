@@ -111,7 +111,7 @@
   <DynamicContent v-if="data" :content="data.data.content" />
  
 
-  <LayoutContainerComponent>
+  <!-- <LayoutContainerComponent>
     <ServiceCardsComponent 
       :title="services.title"
       :hasCta="services.hasCta"
@@ -119,7 +119,7 @@
       :hasSpaceTop="services.hasSpaceTop"
       :serviceList="services.serviceList"
       />
-  </LayoutContainerComponent>
+  </LayoutContainerComponent> -->
 
   <LayoutContainerComponent>
     <CaseStudyComponent
@@ -135,13 +135,5 @@
       :hasSpaceBottom="mockData.caseStudyCard.hasSpaceBottom"
       :hasSpaceTop="mockData.caseStudyCard.hasSpaceTop"
       />
-  </LayoutContainerComponent>
-
-  <LayoutContainerComponent>
-    <AccreditationsComponent 
-      :copy="mockData.accreditations.copy"
-      :images="mockData.accreditations.images"
-      :hasSpaceBottom="mockData.accreditations.hasSpaceBottom"
-      :hasSpaceTop="mockData.accreditations.hasSpaceTop"/>
   </LayoutContainerComponent>
 </template>

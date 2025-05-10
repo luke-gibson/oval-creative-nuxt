@@ -1,9 +1,10 @@
-import type { Image } from './image';
+import type { IImage } from './image';
+import type { RichTextBlocks } from '~/types/strapiRichText';
 
 export interface Accreditations {
     id?: number;
-    copy: string;
+    copy: string | RichTextBlocks[];
     hasSpaceBottom: boolean;
     hasSpaceTop: boolean;
-    images: Image[];
+    images: IImage[];
 }

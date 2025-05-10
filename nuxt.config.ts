@@ -33,4 +33,7 @@ export default defineNuxtConfig({
     },
     display: 'swap',
   },
+  css: [
+    '@/assets/typography.css'
+  ]
 })

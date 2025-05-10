@@ -107,25 +107,9 @@
 </script>
 
 <template>
-  <LayoutContainerComponent>
-    <HeroComponent
-      :image="mockData.hero.image"
-      :alt="mockData.hero.alt"
-      :title="mockData.hero.title"
-    />
-  </LayoutContainerComponent>
-
-  <LayoutContainerComponent>
-    <TextComponent 
-      :copy="mockData.text.copy"
-      :hasCta="mockData.text.hasCta"
-      :ctaHasArrow="mockData.text.ctaHasArrow"
-      :ctaLink="mockData.text.ctaLink"
-      :shortWidth="mockData.text.shortWidth"
-      :hasSpaceBottom="mockData.text.hasSpaceBottom"
-      :hasSpaceTop="mockData.text.hasSpaceTop"
-    />
-  </LayoutContainerComponent>
+ 
+  <DynamicContent v-if="data" :content="data.data.content" />
+ 
 
   <LayoutContainerComponent>
     <ServiceCardsComponent 

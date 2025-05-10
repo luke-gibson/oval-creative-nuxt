@@ -1,21 +1,29 @@
 <script setup lang="ts">
     import type { Hero } from '@/types/hero'
-
-    defineProps<Hero>()
+    import { useCloudinary } from '~/composables/useCloudinary';
+    const props = defineProps<Hero>()
+    const transformedUrl = computed(() => useCloudinary(props.image?.url));
 </script>
 
 <template>
-    <figure class="c-figure relative">
-        <NuxtPicture 
-            class="w-full h-[550px] overflow-hidden block rounded-2xl"
-            :src="image"
-            :alt="alt"
-            format="avif,webp, jpg"
-        />
-        <figcaption class="absolute bottom-2 left-3 right-3 md:bottom-6 md:left-8 md:right-6 max-w-lg md:max-w-3xl z-10">
-            <h1 class="text-white text-5xl md:text-7xl font-extrabold">{{ title }}</h1>
-        </figcaption>
-    </figure>
+    <LayoutContainerComponent>
+        <figure class="c-figure relative">
+            <NuxtPicture 
+                class="w-full h-[550px] overflow-hidden block rounded-2xl"
+                :src="transformedUrl"
+                :alt="image?.alternativeText" 
+                :width="image?.width"
+                :height="image?.height"
+                format="avif,webp, jpg"
+            />        
+            <figcaption 
+                class="absolute bottom-2 left-3 right-3 md:bottom-6 md:left-8 md:right-6 max-w-lg md:max-w-3xl z-10"
+                v-if="Array.isArray(title)">
+                <RichTextBlocks :data="title"/>
+                <!-- <h1 class="text-white text-5xl md:text-7xl font-extrabold">{{ title }}</h1> -->
+            </figcaption>
+        </figure>
+    </LayoutContainerComponent>
 </template>
 
 <style lang="scss">

@@ -1,6 +1,8 @@
+import type { RichTextBlocks } from '~/types/strapiRichText';
+
 export interface Text {
     id?: number;
-    copy: string;
+    copy: string | RichTextBlocks[];
     hasCta: boolean;
     ctaHasArrow: boolean;
     ctaLink: string;

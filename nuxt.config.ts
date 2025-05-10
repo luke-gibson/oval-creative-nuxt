@@ -7,10 +7,25 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/strapi',
   ],
   tailwindcss: {
     config: './tailwind.config.js',
+  },
+  runtimeConfig: {
+    public: {
+      strapiUrl: process.env.STRAPI_URL,
+      siteUrl: 'https://ovalcreative.co.uk',
+    }
+  },
+  strapi: {
+    url: process.env.STRAPI_URL,
+    prefix: '/api',
+    admin: '/admin',
+    version: 'v5',
+    cookie: {},
+    cookieName: 'strapi_jwt'
   },
   googleFonts: {
     families: {

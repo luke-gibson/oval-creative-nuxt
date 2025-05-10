@@ -1,5 +1,33 @@
 <script setup lang="ts">
-  const data = {
+  import type { HomeData } from '~/types/home';
+  const config = useRuntimeConfig();
+  const route = useRoute()
+
+  const { data } = await useAsyncData<HomeData>('home', () => 
+    $fetch(`${config.public.strapiUrl}/api/home?pLevel`)
+  );
+
+  useHead({
+    link: [
+      {
+        rel: 'canonical',
+        href: `${config.public.siteUrl}${route.fullPath}`,
+      },
+    ],
+  })
+
+  useSeoMeta({
+    title: data.value?.data.title || 'Default Title',
+    ogTitle: data.value?.data.title || 'Default Title',
+    description: data.value?.data.description || 'Default description',
+    ogDescription: data.value?.data.description || 'Default description',
+    ogImage: data.value?.data.image?.formats?.large?.url || data.value?.data.image?.url || 'https://example.com/default-image.png',
+    twitterCard: 'summary_large_image',
+  });
+
+
+
+  const mockData = {
     hero : {
       image : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746124680/Spinakker_from_old_portsmouth_e1q906.jpg",
       alt : "Photograph of the spinakker tower through Portmsouth",
@@ -81,21 +109,21 @@
 <template>
   <LayoutContainerComponent>
     <HeroComponent
-      :image="data.hero.image"
-      :alt="data.hero.alt"
-      :title="data.hero.title"
+      :image="mockData.hero.image"
+      :alt="mockData.hero.alt"
+      :title="mockData.hero.title"
     />
   </LayoutContainerComponent>
 
   <LayoutContainerComponent>
     <TextComponent 
-      :copy="data.text.copy"
-      :hasCta="data.text.hasCta"
-      :ctaHasArrow="data.text.ctaHasArrow"
-      :ctaLink="data.text.ctaLink"
-      :shortWidth="data.text.shortWidth"
-      :hasSpaceBottom="data.text.hasSpaceBottom"
-      :hasSpaceTop="data.text.hasSpaceTop"
+      :copy="mockData.text.copy"
+      :hasCta="mockData.text.hasCta"
+      :ctaHasArrow="mockData.text.ctaHasArrow"
+      :ctaLink="mockData.text.ctaLink"
+      :shortWidth="mockData.text.shortWidth"
+      :hasSpaceBottom="mockData.text.hasSpaceBottom"
+      :hasSpaceTop="mockData.text.hasSpaceTop"
     />
   </LayoutContainerComponent>
 
@@ -111,25 +139,25 @@
 
   <LayoutContainerComponent>
     <CaseStudyComponent
-      :link="data.caseStudyCard.link"
-      :image="data.caseStudyCard.image"
-      :alt="data.caseStudyCard.alt"
-      :hasCta="data.caseStudyCard.hasCta"
-      :hasCtaIcon="data.caseStudyCard.hasCtaIcon"
-      :ctaText="data.caseStudyCard.ctaText"
-      :copy="data.caseStudyCard.copy"
-      :brandLogoAlt="data.caseStudyCard.brandLogoAlt"
-      :brandLogoUrl="data.caseStudyCard.brandLogoUrl"
-      :hasSpaceBottom="data.caseStudyCard.hasSpaceBottom"
-      :hasSpaceTop="data.caseStudyCard.hasSpaceTop"
+      :link="mockData.caseStudyCard.link"
+      :image="mockData.caseStudyCard.image"
+      :alt="mockData.caseStudyCard.alt"
+      :hasCta="mockData.caseStudyCard.hasCta"
+      :hasCtaIcon="mockData.caseStudyCard.hasCtaIcon"
+      :ctaText="mockData.caseStudyCard.ctaText"
+      :copy="mockData.caseStudyCard.copy"
+      :brandLogoAlt="mockData.caseStudyCard.brandLogoAlt"
+      :brandLogoUrl="mockData.caseStudyCard.brandLogoUrl"
+      :hasSpaceBottom="mockData.caseStudyCard.hasSpaceBottom"
+      :hasSpaceTop="mockData.caseStudyCard.hasSpaceTop"
       />
   </LayoutContainerComponent>
 
   <LayoutContainerComponent>
     <AccreditationsComponent 
-      :copy="data.accreditations.copy"
-      :images="data.accreditations.images"
-      :hasSpaceBottom="data.accreditations.hasSpaceBottom"
-      :hasSpaceTop="data.accreditations.hasSpaceTop"/>
+      :copy="mockData.accreditations.copy"
+      :images="mockData.accreditations.images"
+      :hasSpaceBottom="mockData.accreditations.hasSpaceBottom"
+      :hasSpaceTop="mockData.accreditations.hasSpaceTop"/>
   </LayoutContainerComponent>
 </template>

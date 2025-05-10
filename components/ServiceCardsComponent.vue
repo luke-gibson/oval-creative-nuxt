@@ -13,7 +13,7 @@
       <CardComponent 
         v-for="service in service_lists"
         :link="service.slug"
-        :title="service.title"
+        :title="service.name"
         :description="service.description"
       />
     </div>

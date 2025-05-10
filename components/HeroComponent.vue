@@ -1,6 +1,5 @@
 <script setup lang="ts">
-    import type { Hero } from '@/types/hero'
-    import { useCloudinary } from '~/composables/useCloudinary';
+    import type { Hero } from '@/types/hero'    
     const props = defineProps<Hero>()
     const transformedUrl = computed(() => useCloudinary(props.image?.url));
 </script>
@@ -17,10 +16,10 @@
                 format="avif,webp, jpg"
             />        
             <figcaption 
+                v-if="Array.isArray(title)"
                 class="absolute bottom-2 left-3 right-3 md:bottom-6 md:left-8 md:right-6 max-w-lg md:max-w-3xl z-10"
-                v-if="Array.isArray(title)">
+                >
                 <RichTextBlocks :data="title"/>
-                <!-- <h1 class="text-white text-5xl md:text-7xl font-extrabold">{{ title }}</h1> -->
             </figcaption>
         </figure>
     </LayoutContainerComponent>

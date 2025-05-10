@@ -43,10 +43,24 @@ export type ServicesListBlock = {
   content?: string;
   hasCta: boolean;
   ctaText: string;
-  ctaLink: string;
+  ctaLink?: string;
   hasSpaceBottom: boolean;
   hasSpaceTop: boolean;
   service_lists: Card[];
 }
+
+export type CaseStudyBlock = {
+  __component: 'components.case-study';
+  id?: number;
+  copy: string | RichTextBlocks[];
+  image: IImage;
+  brandLogo?: IImage;
+  hasCta: boolean;
+  hasCtaIcon: boolean;
+  ctaText: string;
+  link?: string;
+  hasSpaceBottom: boolean;
+  hasSpaceTop: boolean;
+}
   
-export type ContentBlock = ContentTextBlock | ContentHeroBlock | SplitContentBlock | AccreditationsBlock | ServicesListBlock;
+export type ContentBlock = ContentTextBlock | ContentHeroBlock | SplitContentBlock | AccreditationsBlock | ServicesListBlock | CaseStudyBlock;

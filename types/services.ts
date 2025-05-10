@@ -5,8 +5,8 @@ export interface Services {
     id?: number;
     content: string | RichTextBlocks[];
     hasCta: boolean;
-    ctaText: string;
-    ctaLink: string;
+    ctaText?: string;
+    ctaLink?: string;
     hasSpaceBottom: boolean;
     hasSpaceTop: boolean;
     service_lists: Card[];

@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div 
+  <LayoutContainerComponent
     class="c-split flex flex-wrap items-center"
     :class="[hasSpaceBottom ? 'pb-14 md:pb-20' : '', hasSpaceTop ? 'pt-14 md:pt-20' : '']"
   >
@@ -17,10 +17,9 @@
       class="w-full md:w-1/2 text-xl md:text-2xl text-white leading-8 mt-12 md:mt-0 "
       :class="invert ? 'md:order-1 md:pr-28' : 'md:pl-28'"
       >
-      <p>{{ copy }}</p>
-    </div>
-    
-  </div>
+      <RichTextBlocks :data="copy"/>
+    </div>    
+  </LayoutContainerComponent> 
 </template>
 
 <style lang="scss">

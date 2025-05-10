@@ -4,6 +4,7 @@ import TextComponent from '~/components/TextComponent.vue';
 import SplitContentComponent from '~/components/SplitContentComponent.vue';
 import AccreditationsComponent from '~/components/AccreditationsComponent.vue';
 import ServiceCardsComponent from '~/components/ServiceCardsComponent.vue'
+import CaseStudyComponent from '~/components/CaseStudyComponent.vue';
 
 import type { ContentBlock } from '~/types/contentBlock';
 
@@ -15,12 +16,14 @@ const getComponent = (item: ContentBlock) => {
       return HeroComponent;
     case 'components.text':
       return TextComponent;
-    case 'components.split-content':
+    case 'components.split':
       return SplitContentComponent;
     case 'components.accreditations':
       return AccreditationsComponent;
     case 'components.services-list':
       return ServiceCardsComponent;
+    case 'components.case-study':
+      return CaseStudyComponent;
     default:
       return null;
   }

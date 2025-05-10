@@ -18,8 +18,3 @@ export interface IImageFormat {
     };
     url: string;
   }
-
-  // export interface Image {
-  //   url: string;
-  //   alt: string;
-  // }

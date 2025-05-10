@@ -9,6 +9,7 @@
 <style lang="scss">
 html {
   font-family: "Montserrat Alternates", sans-serif;
+  color: #fff;
 }
 
 body.is-locked {
@@ -18,21 +19,16 @@ body.is-locked {
   width: 100%;
 }
 
-/* Base font and colour setup */
-html {
-  font-family: "Montserrat Alternates", sans-serif;
-  color: #fff;
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
 }
-
-/* Headings */
 
 h1 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
 }
-
 @media (min-width: 768px) {
   h1 {
     font-size: 4.5rem;
@@ -43,9 +39,7 @@ h2 {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
 }
-
 @media (min-width: 768px) {
   h2 {
     font-size: 3.75rem;
@@ -56,9 +50,7 @@ h3 {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: 1.25rem;
 }
-
 @media (min-width: 768px) {
   h3 {
     font-size: 3rem;
@@ -68,9 +60,7 @@ h3 {
 h4 {
   font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 1.25rem;
 }
-
 @media (min-width: 768px) {
   h4 {
     font-size: 2.25rem;
@@ -80,9 +70,7 @@ h4 {
 h5 {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
-
 @media (min-width: 768px) {
   h5 {
     font-size: 2rem;
@@ -92,9 +80,7 @@ h5 {
 h6 {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
-
 @media (min-width: 768px) {
   h6 {
     font-size: 1.75rem;
@@ -104,31 +90,41 @@ h6 {
 p {
   font-size: 1.25rem;
   line-height: 1.6;
-  margin-top: 1.5rem;
 
-  &:first-of-type {
-    margin-top: 0;
+  a {
+    transition: color ease-in-out 0.1s;
+    &:hover,
+    &:focus {
+      @apply text-secondary;
+    }
   }
 }
-
 @media (min-width: 768px) {
   p {
     font-size: 1.5rem;
-    line-height: 1.75;
+    line-height: 1.35;
   }
 }
 
-/* Paragraph spacing between siblings */
-p+p {
+// Margin between heading and paragraph
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 1.5rem;
+}
+
+// Margin between paragraphs
+p + p {
   margin-top: 1.25rem;
 }
 
-/* Small text */
 small {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 @media (min-width: 768px) {
   small {
     font-size: 1.125rem;

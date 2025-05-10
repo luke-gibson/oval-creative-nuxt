@@ -1,39 +1,31 @@
-<script lang="ts" setup>
- const data = {
-    hero : {
-      image : "https://res.cloudinary.com/dunufhmqx/image/upload/v1746729519/still_and_west_southsea_l19q1j.jpg",
-      alt : "Photograph of the pub in southsea, the still and west",
-      title : "previous projects oval creative"
-    },  
-    text : {
-      copy : "Where design meets strategy. We're a full service agency specialising in web design and development. Whether you're launching a new brand or streamlining operationgs, we blend creativity with technical expertise to help your business stand out and succeed.",
-      hasCta : false,
-      ctaHasArrow : true,
-      ctaLink : "/projects",    
-      shortWidth : true,
-      hasSpaceBottom: true,
-      hasSpaceTop: true,
-    },
-  }
+<script setup lang="ts">
+  import type { ProjectData } from '~/types/project';
+  const config = useRuntimeConfig();
+  const route = useRoute()
+
+  const { data } = await useAsyncData<ProjectData>('home', () => 
+    $fetch(`${config.public.strapiUrl}/api/project?pLevel`)
+  );
+
+  useHead({
+    link: [
+      {
+        rel: 'canonical',
+        href: `${config.public.siteUrl}${route.fullPath}`,
+      },
+    ],
+  })
+
+  useSeoMeta({
+    title: data.value?.data.title || 'Default Title',
+    ogTitle: data.value?.data.title || 'Default Title',
+    description: data.value?.data.description || 'Default description',
+    ogDescription: data.value?.data.description || 'Default description',
+    ogImage: data.value?.data.image?.formats?.large?.url || data.value?.data.image?.url || 'https://example.com/default-image.png',
+    twitterCard: 'summary_large_image',
+  });
 </script>
 
 <template>
-  <LayoutContainerComponent>
-    <HeroComponent
-      :image="data.hero.image"
-      :alt="data.hero.alt"
-      :title="data.hero.title"
-    />
-  </LayoutContainerComponent>
-  <LayoutContainerComponent>
-    <TextComponent 
-      :copy="data.text.copy"
-      :hasCta="data.text.hasCta"
-      :ctaHasArrow="data.text.ctaHasArrow"
-      :ctaLink="data.text.ctaLink"
-      :shortWidth="data.text.shortWidth"
-      :hasSpaceBottom="data.text.hasSpaceBottom"
-      :hasSpaceTop="data.text.hasSpaceTop"
-    />
-  </LayoutContainerComponent>
+  <DynamicContent v-if="data" :content="data.data.content" />
 </template>

@@ -15,9 +15,9 @@
       <LazyNuxtImg
         v-for="image in images"
         :src="image.url"
-        :alt="image.alt"
+        :alt="image.alternativeText"
         class="w-full max-w-[125px] m-6 md:m-0 md:max-w-[200px] mx-auto "
       />
     </div>
   </LayoutContainerComponent>
-</template>
+</template> 

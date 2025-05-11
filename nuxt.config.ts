@@ -35,5 +35,17 @@ export default defineNuxtConfig({
   },
   css: [
     '@/assets/typography.css'
-  ]
+  ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ]
+    }
+  }
 })

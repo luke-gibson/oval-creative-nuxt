@@ -8,7 +8,7 @@
 v-if="slug && name && image?.formats?.medium?.url"
   :to="`/projects/${slug}`"    
   class="c-project-card group bg-[#3e4555] bg-opacity-60 rounded-2xl text-white overflow-hidden  relative h-[290px]"
-  :aria-label="`link to ${name}`"
+  :aria-label="`${name} ${name} project`"
 >
   <figure class="h-full">
     <NuxtImg
@@ -19,9 +19,9 @@ v-if="slug && name && image?.formats?.medium?.url"
     />
     <figcaption class="absolute bottom-3 left-3 z-10">    
       <h4>{{ name }}</h4>    
-      <span class="mt-4 flex items-center text-lg bg-secondary group-hover:bg-white text-white group-hover:text-primary group-over:text-primary transition-all rounded-xl px-6 pt-[7px] pb-2 inline-block font-medium">
+      <button class="mt-4 flex items-center text-lg bg-secondary group-hover:bg-white text-white group-hover:text-primary group-over:text-primary transition-all rounded-xl px-6 pt-[7px] pb-2 inline-block font-medium">
         {{ name }} project<IconsRightIcon class="w-6 ml-4 transition-all"/>
-      </span>
+      </button>
     </figcaption>
   </figure>
 </NuxtLink>

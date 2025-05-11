@@ -24,16 +24,16 @@
           <p class="text-primary"><strong class="text-lg">&copy; Oval Creative</strong> <NuxtLink class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Privacy Policy</NuxtLink> <NuxtLink class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Terms and Conditions</NuxtLink> <NuxtLink class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Cookie Policy</NuxtLink></p>
         </div>
         <div class="flex mt-8 md:mt-0">
-          <NuxtLink class="text-primary hover:text-secondary transition-all" to="https://facebook.com">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="facebook" to="https://facebook.com">
             <IconsFacebook class="h-7 mr-3"/>
           </NuxtLink>
-          <NuxtLink class="text-primary hover:text-secondary transition-all" to="https://instagram.com">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="instagram" to="https://instagram.com">
             <IconsInstagram class="h-7 mr-3"/>
           </NuxtLink>
-          <NuxtLink class="text-primary hover:text-secondary transition-all" to="https://facebook.com">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="linkedin" to="https://liednkin.com">
             <IconsLinkedin class="h-7 mr-3"/>
           </NuxtLink>
-          <NuxtLink class="text-primary hover:text-secondary transition-all" to="https://wa.me/+447513822562">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="message on whatsapp" to="https://wa.me/+447513822562">
             <IconsWhatsapp class="h-7"/>
           </NuxtLink>
         </div>        

@@ -11,8 +11,8 @@
     <NuxtPicture
       class="w-full md:w-1/2 rounded-2xl overflow-hidden"
       :class="invert ? 'md:order-2' : ''"      
-      :src="image.url"
-      :alt="image.alt"/>
+      :src="image?.formats?.medium?.url"
+      :alt="image?.alternativeText"/>
     <div 
       class="w-full md:w-1/2 text-xl md:text-2xl text-white leading-8 mt-12 md:mt-0 "
       :class="invert ? 'md:order-1 md:pr-28' : 'md:pl-28'"

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
- import type { ProjectData } from '~/types/project';
+ import type { ProjectLandingData } from '~/types/projectLanding';
   const config = useRuntimeConfig();
   const route = useRoute()
 
-  const { data } = await useAsyncData<ProjectData>('project', () => 
+  const { data } = await useAsyncData<ProjectLandingData>('project', () => 
     $fetch(`${config.public.strapiUrl}/api/project?pLevel`)
   );
 

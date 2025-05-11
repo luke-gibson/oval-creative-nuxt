@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-    import type { Projects } from '@/types/projects'   
-    const props = defineProps<Projects>()
+    import type { ProjectList } from '@/types/projectList'   
+    const props = defineProps<ProjectList>()
 </script>
 
 <template>

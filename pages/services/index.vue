@@ -1,9 +1,9 @@
 <script lang="ts" setup>
- import type { ServiceData } from '~/types/service';
+ import type { ServiceLandingData } from '~/types/serviceLanding';
   const config = useRuntimeConfig();
   const route = useRoute()
 
-  const { data } = await useAsyncData<ServcieData>('service', () => 
+  const { data } = await useAsyncData<ServiceLandingData>('service', () => 
     $fetch(`${config.public.strapiUrl}/api/service?pLevel`)
   );
 

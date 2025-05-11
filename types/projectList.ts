@@ -1,6 +1,6 @@
 import type { ProjectCard } from '@/types/projectCard'
 
-export interface Projects {
+export interface ProjectList {
     id?: number;
     hasSpaceBottom: boolean;
     hasSpaceTop: boolean;

@@ -1,7 +1,6 @@
 import type { IImage } from './image';
 import type { ContentBlock } from './contentBlock';
 
-
 export interface ServiceData {
   id: number;
   name: string;

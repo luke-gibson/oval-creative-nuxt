@@ -26,15 +26,12 @@ useHead({
 });
 
 useSeoMeta({
-  title: projectData.value?.title || 'Default Title',
-  ogTitle: projectData.value?.title || 'Default Title',
-  description: projectData.value?.description || 'Default description',
-  ogDescription: projectData.value?.description || 'Default description',
-  ogImage:
-    projectData.value?.image?.formats?.large?.url ||
-    projectData.value?.image?.url ||
-    'https://example.com/default-image.png',
-  twitterCard: 'summary_large_image',
+    title: projectData.value?.title || 'Default Title',
+    ogTitle: projectData.value?.title || 'Default Title',
+    description: projectData.value?.description || 'Default description',
+    ogDescription: projectData.value?.description || 'Default description',
+    ogImage: projectData.value?.image?.formats?.large?.url || projectData.value?.image?.url || 'https://example.com/default-image.png',
+    twitterCard: 'summary_large_image',
 });
 </script>
 

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-    import type { Hero } from '@/types/hero'    
+    import type { Hero } from '@/types/hero';
+    import { useCloudinary } from '@/composables/useCloudinary';
+
     const props = defineProps<Hero>()
     const transformedUrl = computed(() => useCloudinary(props.image?.url));
 </script>
@@ -8,7 +10,7 @@
     <LayoutContainerComponent>
         <figure class="c-figure relative">
             <NuxtPicture 
-                class="w-full h-[550px] overflow-hidden block rounded-2xl"
+                class="w-full h-[450px] md:h-[550px] overflow-hidden block rounded-2xl"
                 :src="transformedUrl"
                 :alt="image?.alternativeText" 
                 :width="image?.width"

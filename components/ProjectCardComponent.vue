@@ -5,24 +5,42 @@
 
 <template>
 <NuxtLink 
-  :to="`projects/${slug}`"    
-  class="group bg-[#3e4555] bg-opacity-60 rounded-2xl text-white border-b-8 border-secondary overflow-hidden flex flex-col"
+v-if="slug && name && image?.formats?.medium?.url"
+  :to="`/projects/${slug}`"    
+  class="c-project-card group bg-[#3e4555] bg-opacity-60 rounded-2xl text-white overflow-hidden  relative h-[290px]"
   :aria-label="`link to ${name}`"
 >
-  <NuxtImg 
-    class="w-full"
-    :src="image.formats.medium.url"
-    :alt="image.alternativeText"
-  />
-  <div class="p-4 pb-16 md:pt-6 md:pb-20 md:px-8 relative flex-1">
-    <h4>{{ name }}</h4>
-    <p>{{ description }}</p>
-    <p class="text-secondary md:text-white md:group-hover:text-secondary transition-all absolute bottom-4 md:bottom-6 left-4 md:left-8 flex items-center">
-      <strong>read more</strong>
-      <IconsRightIcon 
-        class="w-6 ml-3 inline transform transition-transform duration-200 group-hover:translate-x-2"
-      />
-    </p>
-  </div>
+  <figure class="h-full">
+    <NuxtImg
+      v-if="image?.formats?.medium?.url"
+      class="w-full h-full object-cover group-hover:scale-125 transition-all"
+      :src="image.formats.medium.url"
+      :alt="image.alternativeText || name"
+    />
+    <figcaption class="absolute bottom-3 left-3 z-10">    
+      <h4>{{ name }}</h4>    
+      <span class="mt-4 flex items-center text-lg bg-secondary group-hover:bg-white text-white group-hover:text-primary group-over:text-primary transition-all rounded-xl px-6 pt-[7px] pb-2 inline-block font-medium">
+        {{ name }} project<IconsRightIcon class="w-6 ml-4 transition-all"/>
+      </span>
+    </figcaption>
+  </figure>
 </NuxtLink>
 </template>
+
+<style lang="scss">
+.c-project-card {
+  display: block;
+
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 1rem;
+      z-index: 1;
+  }
+}
+</style>

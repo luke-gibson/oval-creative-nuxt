@@ -28,13 +28,13 @@
           </p>
         </div>
         <div class="flex mt-8 md:mt-0">
-          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="facebook" to="https://facebook.com">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="facebook" to="https://www.facebook.com/ovalcreativeagency">
             <IconsFacebook class="h-7 mr-3"/>
           </NuxtLink>
-          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="instagram" to="https://instagram.com">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="instagram" to="https://www.instagram.com/oval.creative/">
             <IconsInstagram class="h-7 mr-3"/>
           </NuxtLink>
-          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="linkedin" to="https://liednkin.com">
+          <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="linkedin" to="https://www.linkedin.com/company/oval-creative">
             <IconsLinkedin class="h-7 mr-3"/>
           </NuxtLink>
           <NuxtLink class="text-primary hover:text-secondary transition-all" aria-label="message on whatsapp" to="https://wa.me/+447513822562">

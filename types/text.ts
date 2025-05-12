@@ -4,6 +4,7 @@ export interface Text {
     id?: number;
     copy?: string | RichTextBlocks[];
     hasCta?: boolean;
+    ctaText: string;
     ctaHasArrow?: boolean;
     ctaLink?: string;
     shortWidth?: boolean;

@@ -22,8 +22,8 @@
     <LayoutContainerComponent class="mt-8 md:mt-12 flex justify-between flex-wrap">
         <div class="w-full md:w-auto ">
           <p class="text-primary"><strong class="text-lg">&copy; Oval Creative</strong> 
-            <NuxtLink to="/privacy-policy" class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Privacy Policy</NuxtLink> 
-            <NuxtLink to="/terms-and-conditions" class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Terms and Conditions</NuxtLink> 
+            <!-- <NuxtLink to="/privacy-policy" class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Privacy Policy</NuxtLink> 
+            <NuxtLink to="/terms-and-conditions" class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Terms and Conditions</NuxtLink>  -->
             <!-- <NuxtLink class="md:ml-8 block md:inline hover:text-secondary transition-all text-base md:text-lg">Cookie Policy</NuxtLink> -->
           </p>
         </div>

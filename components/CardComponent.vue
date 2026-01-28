@@ -11,13 +11,15 @@
     class="group bg-[#3e4555] bg-opacity-60 rounded-2xl pt-8 pr-16 md:pr-24 pb-8 pl-8 text-white border-t-8 border-secondary relative"
     :aria-label="`${title} ${description}`"
     >
-    <h3 class="text-3xl font-bold">{{ title }}</h3>    
-    <p class="text-lg md:text-xl text-white">{{ description }}</p>
+    <div>
+      <h3 class="text-3xl font-bold">{{ title }}</h3>    
+      <p class="text-lg md:text-xl text-white pb-16">{{ description }}</p>
+  </div>
     <button 
-      class="bg-secondary absolute bottom-5 right-6 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out group-hover:right-4 group-focus:right-4"
+      class="bg-secondary absolute bottom-5 px-6 font-bold h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
       :aria-label="`link to ${title}`"
-      >
-      <IconsRightIcon class="w-8"/>
+      >Learn more 
+      <IconsRightIcon class="w-8 ml-4"/>
     </button>
   </NuxtLink>
 </template>

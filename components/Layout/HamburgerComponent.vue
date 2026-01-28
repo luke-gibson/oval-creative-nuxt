@@ -30,7 +30,7 @@ const { toggleNav } = useMobileNav()
     border-radius: 5px;
     display: block;
     margin: .4rem auto;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 
     &:nth-child(1){
       width: 50%;
@@ -51,7 +51,8 @@ const { toggleNav } = useMobileNav()
         background-color: #fff;
 
         &:nth-child(2) {
-          opacity: 0;          
+          opacity: 0;      
+          visibility: hidden;    
         }
 
         &:nth-child(1) {

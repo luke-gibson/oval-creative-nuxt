@@ -28,8 +28,7 @@ const pricingTiers: PricingTier[] = [
       'SSL certificate included',
       'Hosting included',
       'Contact form',
-      'Basic SEO setup',
-      'AI content support',
+      'Basic SEO setup and content generation',
     ],
     cta: 'Get Started'
   },

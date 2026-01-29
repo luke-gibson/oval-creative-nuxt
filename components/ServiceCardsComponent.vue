@@ -95,7 +95,7 @@ onUnmounted(() => {
       <button 
         @click="scrollLeft"
         :disabled="!canScrollLeft"
-        class="p-2 rounded-full border-solid border-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        class="p-3 rounded-full bg-white/10 border-2 border-white/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/20"
         aria-label="Scroll left"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ onUnmounted(() => {
       <button 
         @click="scrollRight"
         :disabled="!canScrollRight"
-        class="p-2 rounded-full border-solid border-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        class="p-3 rounded-full bg-white/10 border-2 border-white/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/20"
         aria-label="Scroll right"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

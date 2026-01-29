@@ -6,6 +6,7 @@ import AccreditationsComponent from '~/components/AccreditationsComponent.vue';
 import ServiceCardsComponent from '~/components/ServiceCardsComponent.vue'
 import CaseStudyComponent from '~/components/CaseStudyComponent.vue';
 import ProjectListComponent from '~/components/ProjectListComponent.vue';
+import Pricing from '~/components/Pricing.vue';
 
 import type { ContentBlock } from '~/types/contentBlock';
 
@@ -27,6 +28,8 @@ const getComponent = (item: ContentBlock) => {
       return CaseStudyComponent;
     case 'components.project-list':
       return ProjectListComponent;
+    case 'components.pricing':
+      return Pricing;
     default:
       return null;
   }

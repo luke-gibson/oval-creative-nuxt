@@ -168,8 +168,8 @@ onUnmounted(() => {
                 : 'bg-white/5 border-2 border-white/10'
             ]"
           >
-            <div v-if="tier.highlighted" class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 z-10">
-              <span class="bg-[#00d9a3] text-[#0a1628] px-4 py-1 rounded-full text-sm font-bold whitespace-nowrap">
+            <div v-if="tier.highlighted" class="absolute -top-3.5 left-8 transform z-10">
+              <span class="bg-[#00d9a3] text-[#0a1628] px-4 py-1 rounded-full text-md font-bold whitespace-nowrap">
                 Most Popular
               </span>
             </div>

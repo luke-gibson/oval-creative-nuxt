@@ -1,18 +1,79 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import type { Services } from '@/types/services'
 
-defineProps<Services>()
+const props = defineProps<Services>()
 
 const scrollContainer = ref(null)
+const currentIndex = ref(0)
+const canScrollLeft = ref(false)
+const canScrollRight = ref(true)
+
+const updateCurrentIndex = () => {
+  if (!scrollContainer.value) return
+  
+  const container = scrollContainer.value
+  const containerRect = container.getBoundingClientRect()
+  const cards = container.querySelectorAll('.snap-center')
+  
+  // Find which card is currently most visible
+  let closestIndex = 0
+  let closestDistance = Infinity
+  
+  cards.forEach((card, index) => {
+    const cardRect = card.getBoundingClientRect()
+    const distance = Math.abs(cardRect.left - containerRect.left)
+    if (distance < closestDistance) {
+      closestDistance = distance
+      closestIndex = index
+    }
+  })
+  
+  currentIndex.value = closestIndex
+  updateScrollButtons()
+}
+
+const updateScrollButtons = () => {
+  const totalCards = props.service_lists?.length || 0
+  canScrollLeft.value = currentIndex.value > 0
+  canScrollRight.value = currentIndex.value < totalCards - 1
+}
 
 const scrollLeft = () => {
-  scrollContainer.value.scrollBy({ left: -300, behavior: 'smooth' })
+  if (currentIndex.value > 0) {
+    currentIndex.value--
+    scrollToIndex(currentIndex.value)
+  }
 }
 
 const scrollRight = () => {
-  scrollContainer.value.scrollBy({ left: 300, behavior: 'smooth' })
+  const totalCards = props.service_lists?.length || 0
+  if (currentIndex.value < totalCards - 1) {
+    currentIndex.value++
+    scrollToIndex(currentIndex.value)
+  }
 }
+
+const scrollToIndex = (index) => {
+  if (!scrollContainer.value) return
+  const cards = scrollContainer.value.querySelectorAll('.snap-center')
+  if (cards[index]) {
+    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' })
+  }
+}
+
+onMounted(() => {
+  if (scrollContainer.value) {
+    scrollContainer.value.addEventListener('scroll', updateCurrentIndex)
+    updateCurrentIndex()
+  }
+})
+
+onUnmounted(() => {
+  if (scrollContainer.value) {
+    scrollContainer.value.removeEventListener('scroll', updateCurrentIndex)
+  }
+})
 </script>
 
 <template>
@@ -24,16 +85,17 @@ const scrollRight = () => {
       </ButtonsSecondaryButton>
     </div>
     <div
-  ref="scrollContainer"
-  class="flex md:grid md:grid-cols-3 gap-6 md:gap-10 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
-  <CardComponent v-for="service in service_lists" :link="service.slug" :title="service.name"
-    :description="service.description" class="snap-center flex-shrink-0 w-[75vw] md:w-auto" />
-</div>
+      ref="scrollContainer"
+      class="flex md:grid md:grid-cols-3 gap-6 md:gap-10 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
+      <CardComponent v-for="service in service_lists" :key="service.slug" :link="service.slug" :title="service.name"
+        :description="service.description" class="snap-center flex-shrink-0 w-[75vw] md:w-auto" />
+    </div>
     
     <div class="flex justify-end gap-4 mt-6 md:hidden">
       <button 
         @click="scrollLeft"
-        class="p-2 rounded-full border-solid border-2 transition-colors"
+        :disabled="!canScrollLeft"
+        class="p-2 rounded-full border-solid border-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         aria-label="Scroll left"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,7 +104,8 @@ const scrollRight = () => {
       </button>
       <button 
         @click="scrollRight"
-        class="p-2 rounded-full border-solid border-2 transition-colors"
+        :disabled="!canScrollRight"
+        class="p-2 rounded-full border-solid border-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         aria-label="Scroll right"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

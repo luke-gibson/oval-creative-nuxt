@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     public: {
       strapiUrl: process.env.STRAPI_URL,
       siteUrl: 'https://ovalcreative.co.uk',
+      captchaKey: process.env.NUXT_PUBLIC_CAPTCHA_KEY
     }
   },
   strapi: {

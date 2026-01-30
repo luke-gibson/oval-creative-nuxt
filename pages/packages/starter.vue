@@ -29,7 +29,8 @@ const submitError = ref(false)
 const hcaptchaToken = ref('')
 const hcaptchaError = ref(false)
 
-const hcaptchaSiteKey = process.env.CAPTCHA_KEY
+const config = useRuntimeConfig()
+const hcaptchaSiteKey = config.public.captchaKey
 
 const onVerify = (token) => {
   hcaptchaToken.value = token

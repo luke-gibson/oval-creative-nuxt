@@ -73,7 +73,7 @@ const handleSubmit = async () => {
         ...form.value,
         package: 'Enterprise - £150/month',
         seoGoals: form.value.seoGoals.join(', '),
-        'h-captcha-response': hcaptchaToken.value
+        '_captcha': hcaptchaToken.value
       })
     })
 

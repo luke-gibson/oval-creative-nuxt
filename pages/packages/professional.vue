@@ -71,7 +71,7 @@ const handleSubmit = async () => {
         ...form.value,
         package: 'Professional - £75/month',
         features: form.value.features.join(', '),
-        'h-captcha-response': hcaptchaToken.value
+        '_captcha': hcaptchaToken.value
       })
     })
 

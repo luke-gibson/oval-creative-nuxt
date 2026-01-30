@@ -9,6 +9,7 @@ const transformedUrl = computed(() => useCloudinary(props.image?.formats.large.u
     <figure class="c-casestudy relative"
       :class="[hasSpaceBottom ? 'mb-14 md:mb-20' : '', hasSpaceTop ? 'mt-14 md:mt-20' : '']">
       <NuxtPicture 
+        v-if="image"
         class="w-full h-[550px] overflow-hidden block rounded-2xl" 
         :src="transformedUrl"
         :alt="image?.alternativeText" 
@@ -18,12 +19,13 @@ const transformedUrl = computed(() => useCloudinary(props.image?.formats.large.u
       <figcaption
         class="absolute bottom-6 left-5 right-5 md:bottom-10 md:left-12 md:right-12 max-w-lg md:max-w-4xl z-10">
         <NuxtImg 
+          v-if="brandLogo"
           class="w-full max-w-[175px] md:max-w-[250px] mb-4" 
           :src="brandLogo?.url" 
           :width="brandLogo?.width" 
           :height="brandLogo?.height" 
           :alt="brandLogo?.alternativeText" />
-        <RichTextBlocks :data="copy" />
+        <RichTextBlocks v-if="copy" :data="copy" />
         <ButtonsSecondaryButton 
           v-if="hasCta" 
           :to="link" 

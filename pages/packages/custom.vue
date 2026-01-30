@@ -74,7 +74,7 @@ const handleSubmit = async () => {
         ...form.value,
         package: 'Custom - Bespoke Solution',
         features: form.value.features.join(', '),
-        'h-captcha-response': hcaptchaToken.value
+        '_captcha': hcaptchaToken.value
       })
     })
 

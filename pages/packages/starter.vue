@@ -51,15 +51,23 @@ const handleSubmit = async () => {
   submitError.value = false
 
   try {
-    const response = await fetch('https://formspree.io/f/mqebyavn', {
+    const response = await fetch('https://formspree.io/f/mzdgjdzw', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify({
-        ...form.value,
+        name: form.value.name,
+        email: form.value.email,
+        phone: form.value.phone,
+        company: form.value.company,
+        website: form.value.website,
+        pages: form.value.pages,
+        timeline: form.value.timeline,
+        message: form.value.message,
         package: 'Starter - £35/month',
-        '_captcha': hcaptchaToken.value
+        'g-recaptcha-response': hcaptchaToken.value
       })
     })
 

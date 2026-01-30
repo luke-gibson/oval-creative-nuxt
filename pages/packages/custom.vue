@@ -248,34 +248,34 @@ const handleSubmit = async () => {
           <div class="space-y-4 text-white">
             <div class="flex items-start">
               <span
-                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-3">1</span>
+                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-6 mt-3">1</span>
               <div>
                 <h4 class="font-bold mb-1">Discovery Call</h4>
-                <p class="text-gray-300 text-sm">We understand your needs and goals</p>
+                <p class="text-gray-300 text-sm !mt-0">We understand your needs and goals</p>
               </div>
             </div>
             <div class="flex items-start">
               <span
-                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-3">2</span>
+                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-6 mt-3">2</span>
               <div>
                 <h4 class="font-bold mb-1">Scoping & Proposal</h4>
-                <p class="text-gray-300 text-sm">Detailed plan with timeline and pricing</p>
+                <p class="text-gray-300 text-sm !mt-0">Detailed plan with timeline and pricing</p>
               </div>
             </div>
             <div class="flex items-start">
               <span
-                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-3">3</span>
+                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-6 mt-3">3</span>
               <div>
                 <h4 class="font-bold mb-1">Design & Development</h4>
-                <p class="text-gray-300 text-sm">Iterative build with regular check-ins</p>
+                <p class="text-gray-300 text-sm !mt-0">Iterative build with regular check-ins</p>
               </div>
             </div>
             <div class="flex items-start">
               <span
-                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-3">4</span>
+                class="bg-secondary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mr-6 mt-3">4</span>
               <div>
                 <h4 class="font-bold mb-1">Launch & Support</h4>
-                <p class="text-gray-300 text-sm">Deployment and ongoing maintenance</p>
+                <p class="text-gray-300 text-sm !mt-0">Deployment and ongoing maintenance</p>
               </div>
             </div>
           </div>

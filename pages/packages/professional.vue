@@ -70,8 +70,8 @@ const handleSubmit = async () => {
       body: JSON.stringify({
         ...form.value,
         package: 'Professional - £75/month',
-        features: form.value.features.join(', '),
-        '_captcha': hcaptchaToken.value
+        features: form.value.features.join(', '),        
+        'h-captcha-response': hcaptchaToken.value
       })
     })
 

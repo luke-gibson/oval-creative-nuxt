@@ -72,8 +72,8 @@ const handleSubmit = async () => {
       body: JSON.stringify({
         ...form.value,
         package: 'Enterprise - £150/month',
-        seoGoals: form.value.seoGoals.join(', '),
-        '_captcha': hcaptchaToken.value
+        seoGoals: form.value.seoGoals.join(', '),        
+        'h-captcha-response': hcaptchaToken.value
       })
     })
 

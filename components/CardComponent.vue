@@ -8,18 +8,20 @@
     :to="`/services/${link}`"
     :title="title"
     :description="description"
-    class="group bg-[#3e4555] bg-opacity-60 rounded-2xl pt-8 pr-16 md:pr-24 pb-8 pl-8 text-white border-t-8 border-secondary relative"
+    class="group bg-white/5 backdrop-blur-sm rounded-3xl p-8 text-white border-2 border-white/10 relative transition-all hover:border-secondary/50 hover:bg-white/10"
     :aria-label="`${title} ${description}`"
     >
-    <div>
-      <h3 class="text-3xl font-bold">{{ title }}</h3>    
-      <p class="text-lg md:text-xl text-white pb-16">{{ description }}</p>
-  </div>
-    <button 
-      class="bg-secondary absolute bottom-5 px-6 font-bold h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
-      :aria-label="`link to ${title}`"
-      >Learn more 
-      <IconsRightIcon class="w-8 ml-4"/>
-    </button>
+    <div class="mb-20">
+      <h3 class="text-2xl md:text-3xl font-bold mb-3">{{ title }}</h3>    
+      <p class="text-base md:text-lg text-gray-300 leading-relaxed">{{ description }}</p>
+    </div>
+    <div 
+      class="absolute bottom-6 left-8 right-8 flex items-center justify-between"
+      >
+      <span class="text-secondary font-bold text-lg">Learn more</span>
+      <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center transition-transform group-hover:scale-110">
+        <IconsRightIcon class="w-5 text-primary"/>
+      </div>
+    </div>
   </NuxtLink>
 </template>

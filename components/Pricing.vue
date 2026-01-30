@@ -2,13 +2,14 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 interface PricingTier {
-  name: string
-  price: string
-  period: string
-  description: string
-  features: string[]
-  cta: string
-  highlighted?: boolean
+  name: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  cta: string,
+  link: string,
+  highlighted?: boolean,
 }
 
 const scrollContainer = ref(null)
@@ -30,7 +31,8 @@ const pricingTiers: PricingTier[] = [
       'Contact form',
       'Basic SEO setup and content generation',
     ],
-    cta: 'Get Started'
+    cta: 'Get Started',
+    link: '/packages/starter'
   },
   {
     name: 'Professional',
@@ -46,6 +48,7 @@ const pricingTiers: PricingTier[] = [
       'Priority support'
     ],
     cta: 'Get Started',
+    link: '/packages/professional',
     highlighted: true
   },
   {
@@ -61,7 +64,8 @@ const pricingTiers: PricingTier[] = [
       'Monthly reporting',
       'Content recommendations',
     ],
-    cta: 'Get Started'
+    cta: 'Get Started',
+    link: '/packages/enterprise',
   },
   {
     name: 'Custom',
@@ -76,7 +80,8 @@ const pricingTiers: PricingTier[] = [
       'API development',
       'Dedicated support'
     ],
-    cta: 'Contact Us'
+    cta: 'Contact Us',
+    link: '/packages/custom',
   }
 ]
 
@@ -145,7 +150,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="bg-[#0a1628] overflow-x-hidden pb-14 md:pb-20">
+  <section class="bg-primary overflow-x-hidden pb-14 md:pb-20">
     <LayoutContainerComponent>
       <div class="text-center mb-12">
         <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Simple, transparent pricing</h2>
@@ -164,12 +169,12 @@ onUnmounted(() => {
               'pricing-card snap-center flex-shrink-0 w-[85vw] md:w-[50vw] xl:w-auto',
               'rounded-3xl p-6 md:p-8 transition-all backdrop-blur-sm relative',
               tier.highlighted 
-                ? 'bg-gradient-to-br from-[#00d9a3]/20 to-[#00d9a3]/5 border-2 border-[#00d9a3]' 
+                ? 'bg-gradient-to-br from-secondary/20 to-secondary/5 border-2 border-secondary' 
                 : 'bg-white/5 border-2 border-white/10'
             ]"
           >
             <div v-if="tier.highlighted" class="absolute -top-3.5 left-8 transform z-10">
-              <span class="bg-[#00d9a3] text-[#0a1628] px-4 py-1 rounded-full text-md font-bold whitespace-nowrap">
+              <span class="bg-secondary text-primary px-4 py-1 rounded-full text-md font-bold whitespace-nowrap">
                 Most Popular
               </span>
             </div>
@@ -185,7 +190,7 @@ onUnmounted(() => {
 
             <ul class="space-y-3 mb-6">
               <li v-for="feature in tier.features" :key="feature" class="flex items-start">
-                <svg class="w-5 h-5 text-[#00d9a3] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                 </svg>
                 <span class="text-gray-300 text-sm md:text-base">{{ feature }}</span>
@@ -193,11 +198,11 @@ onUnmounted(() => {
             </ul>
 
             <NuxtLink
-              to="/contact"
+              :to=tier.link
               :class="[
                 'block w-full py-3 px-6 rounded-xl font-bold transition-all text-center text-base md:text-lg',
                 tier.highlighted
-                  ? 'bg-[#00d9a3] text-[#0a1628] hover:bg-[#00f0b8] hover:scale-105'
+                  ? 'bg-secondary text-primary hover:bg-[#00f0b8] hover:scale-105'
                   : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
               ]"
             >

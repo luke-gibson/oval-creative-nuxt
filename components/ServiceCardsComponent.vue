@@ -78,7 +78,7 @@ onUnmounted(() => {
 
 <template>
   <LayoutContainerComponent class="overflow-x-hidden" :class="[hasSpaceBottom ? 'pb-14 md:pb-20' : '', hasSpaceTop ? 'pt-14 md:pt-20' : '']">
-    <div class="flex justify-between flex-wrap items-start mb-12">
+    <div v-if="content" class="flex justify-between flex-wrap items-start mb-12">
       <RichTextBlocks class="max-w-3xl" :data="content" />
       <ButtonsSecondaryButton v-if="hasCta" class="mt-6 flex" :to="ctaLink">{{ ctaText }}
         <IconsRightIcon class="ml-2 w-5 inline-block" />

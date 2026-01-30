@@ -31,7 +31,7 @@ const submitError = ref(false)
 const hcaptchaToken = ref('')
 const hcaptchaError = ref(false)
 
-const hcaptchaSiteKey = '6cf2670e-e2ce-4a62-a33c-201cd7384d1a'
+const hcaptchaSiteKey = process.env.CAPTCHA_KEY
 
 const featureOptions = [
   'E-commerce functionality',

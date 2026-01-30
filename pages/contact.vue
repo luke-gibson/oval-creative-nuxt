@@ -144,14 +144,14 @@ const handleSubmit = async () => {
             </div>
             <div>
               <h3 class="text-white font-bold text-xl mb-2">Location</h3>
-              <p class="text-gray-300 text-lg">Portsmouth, UK</p>
+              <p class="text-gray-300 text-lg !mt-0">Portsmouth, UK</p>
             </div>
           </div>
         </div>
 
         <div class="bg-gradient-to-br from-secondary/20 to-secondary/5 border-2 border-secondary rounded-2xl p-6 md:p-8">
           <h3 class="text-white font-bold text-xl mb-3">Response Time</h3>
-          <p class="text-gray-300">We typically respond within <span class="text-secondary font-bold">24 hours</span> during business days.</p>
+          <p class="text-gray-300 text-md">We typically respond within <span class="text-secondary font-bold">24 hours</span> during business days.</p>
         </div>
       </div>
 

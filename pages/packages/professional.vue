@@ -62,7 +62,7 @@ const handleSubmit = async () => {
   submitError.value = false
 
   try {
-    const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_FORM_ID', {
+    const response = await fetch('https://formspree.io/f/mzdgjdzw', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -372,7 +372,7 @@ const handleSubmit = async () => {
         </div>
 
         <div v-if="submitError" class="mb-6 p-4 bg-red-500/20 border-2 border-red-500 rounded-xl">
-          <p class="text-white">Something went wrong. Please try again or email us directly at
+          <p class="text-white text-sm">Something went wrong. Please try again or email us directly at
             letschat@ovalcreative.co.uk</p>
         </div>
 

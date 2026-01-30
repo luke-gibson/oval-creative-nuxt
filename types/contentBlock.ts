@@ -44,8 +44,8 @@ export type ServicesListBlock = {
   hasCta: boolean;
   ctaText: string;
   ctaLink?: string;
-  hasSpaceBottom: boolean;
-  hasSpaceTop: boolean;
+  hasSpaceBottom?: boolean;
+  hasSpaceTop?: boolean;
   service_lists: Card[];
 }
 
@@ -59,8 +59,8 @@ export type CaseStudyBlock = {
   hasCtaIcon: boolean;
   ctaText: string;
   link?: string;
-  hasSpaceBottom: boolean;
-  hasSpaceTop: boolean;
+  hasSpaceBottom?: boolean;
+  hasSpaceTop?: boolean;
 }
   
 export type ContentBlock = ContentTextBlock | ContentHeroBlock | SplitContentBlock | AccreditationsBlock | ServicesListBlock | CaseStudyBlock;

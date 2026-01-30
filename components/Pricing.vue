@@ -80,7 +80,7 @@ const pricingTiers: PricingTier[] = [
       'API development',
       'Dedicated support'
     ],
-    cta: 'Contact Us',
+    cta: 'Get started',
     link: '/packages/custom',
   }
 ]

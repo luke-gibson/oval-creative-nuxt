@@ -72,7 +72,7 @@ const handleSubmit = async () => {
       body: JSON.stringify({
         ...form.value,
         package: 'Enterprise - £150/month',
-        seoGoals: form.value.seoGoals.join(', '),        
+        seoGoals: form.value.seoGoals.join(', '),
         'h-captcha-response': hcaptchaToken.value
       })
     })
@@ -370,7 +370,8 @@ const handleSubmit = async () => {
         <div class="mb-6">
           <label for="timeline" class="block text-white font-semibold mb-2">When would you like to start?</label>
           <select v-model="form.timeline" id="timeline"
-            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors">
+            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors appearance-none"
+            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; padding-right: 3rem;">
             <option value="">Select a timeframe</option>
             <option value="immediately">Immediately</option>
             <option value="1month">Within 1 month</option>

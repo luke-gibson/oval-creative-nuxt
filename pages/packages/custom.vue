@@ -73,7 +73,7 @@ const handleSubmit = async () => {
       body: JSON.stringify({
         ...form.value,
         package: 'Custom - Bespoke Solution',
-        features: form.value.features.join(', '),        
+        features: form.value.features.join(', '),
         'h-captcha-response': hcaptchaToken.value
       })
     })
@@ -347,7 +347,8 @@ const handleSubmit = async () => {
           <label for="projectType" class="block text-white font-semibold mb-2">What type of project do you need?
             *</label>
           <select v-model="form.projectType" id="projectType" required
-            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors">
+            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors appearance-none"
+            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; padding-right: 3rem;">
             <option value="">Select project type</option>
             <option value="ecommerce">E-commerce Website</option>
             <option value="webapp">Custom Web Application</option>
@@ -372,7 +373,8 @@ const handleSubmit = async () => {
         <div class="mb-6">
           <label for="budget" class="block text-white font-semibold mb-2">What's your budget range?</label>
           <select v-model="form.budget" id="budget"
-            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors">
+            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors appearance-none"
+            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; padding-right: 3rem;">
             <option value="">Select budget range</option>
             <option value="under-5k">Under £5,000</option>
             <option value="5-10k">£5,000 - £10,000</option>
@@ -386,7 +388,8 @@ const handleSubmit = async () => {
         <div class="mb-6">
           <label for="timeline" class="block text-white font-semibold mb-2">What's your timeline?</label>
           <select v-model="form.timeline" id="timeline"
-            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors">
+            class="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-xl text-white focus:outline-none focus:border-secondary transition-colors appearance-none"
+            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; padding-right: 3rem;">
             <option value="">Select timeline</option>
             <option value="urgent">Urgent (ASAP)</option>
             <option value="1-2months">1-2 months</option>
